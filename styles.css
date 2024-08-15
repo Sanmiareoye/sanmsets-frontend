@@ -1,8 +1,9 @@
+
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@400;500;600;700&display=swap");
 
 :root {
   --primary-color: #0f1a2c;
-  --secondary-color: #f6ac0f;
+  --secondary-color: #f07de6;
   --text-dark: #0f172a;
   --text-light: #64748b;
   --extra-light: #f8fafc;
@@ -166,10 +167,52 @@ nav {
       rgba(15, 26, 44, 0.5),
       rgba(15, 26, 44, 0.5)
     ),
-    url("assets/header.jpg");
+    url("assets/about-1.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+  transition: 4s;
+
+  animation-name: animate;
+  animation-direction: alternate-reverse;
+  animation-play-state: running;
+  animation-timing-function: ease-in-out;
+  animation-duration: 30s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+
+}
+@keyframes animate{
+  0%{
+    background-image: linear-gradient(
+      rgba(15, 26, 44, 0.5),
+      rgba(15, 26, 44, 0.5)
+    ), url(assets/4.jpg);
+  }
+  25%{
+    background-image: linear-gradient(
+      rgba(15, 26, 44, 0.5),
+      rgba(15, 26, 44, 0.5)
+    ), url(assets/room-5.jpg);
+  }
+  50%{
+    background-image: linear-gradient(
+      rgba(15, 26, 44, 0.5),
+      rgba(15, 26, 44, 0.5)
+    ), url(assets/1.jpg);
+  }
+  75%{
+    background-image: linear-gradient(
+      rgba(15, 26, 44, 0.5),
+      rgba(15, 26, 44, 0.5)
+    ), url(assets/about-2.jpg);
+  }
+  100%{
+    background-image: linear-gradient(
+      rgba(15, 26, 44, 0.5),
+      rgba(15, 26, 44, 0.5)
+    ), url(assets/about-1.jpg);
+  }
 }
 
 .header__container .section__subheader {
@@ -645,6 +688,56 @@ nav {
   color: var(--text-light);
   text-align: center;
 }
+/* Basic styles for the slider */
+.slider {
+  position: relative;
+  width: 100%;
+  max-width: 600px; /* Adjust as needed */
+  margin: auto;
+  overflow: hidden;
+}
+
+.slider__wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.slider__container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider__item {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.slider__item img {
+  width: 100%;
+  display: block;
+}
+
+.slider__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  z-index: 10;
+}
+
+.slider__arrow--left {
+  left: 10px;
+}
+
+.slider__arrow--right {
+  right: 10px;
+}
+
 
 @media (width > 480px) {
   .about__grid {
