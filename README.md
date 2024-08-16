@@ -1,3 +1,3 @@
-# Hotel_Miranda_16-10-23
-Learn how to create a stunning hotel booking website from scratch using HTML, CSS, and JavaScript in this comprehensive tutorial.
+# Sanmsets Nail Page
+Developed a website from scratch using HTML, CSS, and JavaScript for my nail business, where users can learn more about the business and book.
 # sanmsets-frontend
